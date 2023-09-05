@@ -1,11 +1,11 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const Page = () => {
-
-    return <div>
-        <h2>Company Page</h2> 
-    <Link href="/">Home</Link>
+  return (
+    <div>
+      <h2>Company Page</h2>
     </div>
-}
+  );
+};
 
-export default Page
+export default Page;
