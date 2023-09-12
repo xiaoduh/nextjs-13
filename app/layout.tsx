@@ -1,7 +1,9 @@
+import Navigation from "@/components/navigation/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import Footer from "@/components/navigation/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,25 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="px-4 py-6 border-b flex items-center justify-between">
-          <h2>
-            <Link className="font-bold" href="/">
-              Logo
-            </Link>
-          </h2>
-          <ul className="flex items-center gap-3">
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/about/company">Company</Link>
-            </li>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-          </ul>
-        </div>
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
